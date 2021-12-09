@@ -1,7 +1,7 @@
 import  cv2
 import random
 
-# Lodad some pre-trained data
+# Load some pre-trained data
 trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Chose and image
@@ -17,7 +17,7 @@ while True:
 
   # Detect faces coordinates
   face_coordinates = trained_face_data.detectMultiScale(grayscaled_img)
-  # Draw rectangles around the face
+  # Draw rectangles around the face whit colors
   for (x, y, w, h) in face_coordinates:
     cv2.rectangle(frame, (x,y), (x+w, y+h),(random.randrange(256),random.randrange(256),random.randrange(256)),2)
   print(face_coordinates)
@@ -26,12 +26,4 @@ while True:
   cv2.imshow('Image', frame)
   cv2.waitKey(1)
 
-
-
-
-"""
-
-
-
- """
 print ("Code Completed")
