@@ -5,6 +5,8 @@ trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Chose and image
 img = cv2.imread('face1.jpeg')
+# Campute video from webcamera
+webcam = cv2.VideoCapture(0)
 
 # Must convert to grayscale 
 grayscaled_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
